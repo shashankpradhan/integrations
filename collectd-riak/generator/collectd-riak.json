@@ -1,0 +1,19 @@
+{
+    "conf": {
+        "10-riak.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-riak/10-riak.conf"
+    },
+    "dependencies": ["collectd-curl-json"],
+    "download_code": false,
+    "instructions": [       
+        {"FROM": "quay.io/signalfuse/collectd"},
+        {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
+        {"ADD": {"plugins/redis-collectd-plugin": "/opt/redis-collectd-plugin"}},
+        {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
+        {"UPGRADE": true},
+        {"UPDATE": true},
+        {"WORKDIR_POST": "/.docker/"},
+        {"CMD": "/.docker/run.sh"}
+    ],
+    "layer": false,
+    "tags": ["master"]
+}

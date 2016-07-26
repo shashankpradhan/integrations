@@ -1,0 +1,21 @@
+{
+    "conf": {
+        "10-jmx.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-java/10-jmx.conf"
+    },
+    "dependencies": [],
+    "download_code": true,
+    "instructions": [
+        {"FROM": "quay.io/signalfuse/collectd"},
+        {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
+        {"ADD": {"plugins/collectd-java": "/opt/collectd/collectd-java"}},
+        {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
+        {"UPGRADE": true},
+        {"UPDATE": true},
+        {"RUN": "mkdir /usr/collectd/java-collectd-plugin"},
+        {"RUN": "cp /opt/collectd/collectd-java/signalfx_types_db /usr/share/collectd/java-collectd-plugin/"},
+        {"WORKDIR_POST": "/.docker/"},
+        {"CMD": "/.docker/run.sh"}
+    ],
+    "layer": false,
+    "tags": ["master"]
+}

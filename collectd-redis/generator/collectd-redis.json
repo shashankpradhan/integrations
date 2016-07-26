@@ -1,0 +1,20 @@
+{
+    "conf": {
+        "10-redis_master.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-redis/10-redis_master.conf",
+        "10-redis_slave.conf": "https://raw.githubusercontent.com/signalfx/integrations/master/collectd-redis/10-redis_slave.conf"
+    },
+    "dependencies": [],
+    "download_code": true,
+    "instructions": [       
+        {"FROM": "quay.io/signalfuse/collectd"},
+        {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
+        {"ADD": {"plugins/redis-collectd-plugin": "/opt/redis-collectd-plugin"}},
+        {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
+        {"UPGRADE": true},
+        {"UPDATE": true},
+        {"WORKDIR_POST": "/.docker/"},
+        {"CMD": "/.docker/run.sh"}
+    ],
+    "layer": false,
+    "tags": ["master"]
+}

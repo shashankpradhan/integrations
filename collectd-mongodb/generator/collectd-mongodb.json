@@ -1,0 +1,23 @@
+{
+    "conf": {
+        "10-mongodb.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-mongodb/10-mongodb.conf"
+    },
+    "dependencies": [],
+    "download_code": true,
+    "instructions": [       
+        {"FROM": "quay.io/signalfuse/collectd"},
+        {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
+        {"ADD": {"plugins/collectd-mongodb": "/opt/collectd/collectd-mongodb"}},
+        {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
+        {"UPGRADE": true},
+        {"UPDATE": true},
+        {"PACKAGES": "python-pip"},
+        {"PACKAGES": "python-dev"},
+        {"PACKAGES": "build-essential"},
+        {"RUN": "pip install pymongo==3.0.3"},
+        {"WORKDIR_POST": "/.docker/"},
+        {"CMD": "/.docker/run.sh"}
+    ],
+    "layer": false,
+    "tags": ["master"]
+}

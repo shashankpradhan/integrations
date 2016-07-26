@@ -1,0 +1,21 @@
+{
+    "conf": {
+        "20-elasticsearch.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-elasticsearch/20-elasticsearch.conf"
+    },
+    "dependencies": [],
+    "download_code": true,
+    "instructions": [       
+        {"FROM": "quay.io/signalfuse/collectd"},
+        {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
+        {"ADD": {"plugins/collectd-elasticsearch": "/usr/share/collectd/collectd-elasticsearch"}},
+        {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
+        {"UPGRADE": true},
+        {"UPDATE": true},
+        {"RUN": "mkdir /usr/share/collectd/python"},
+        {"RUN": "cp /usr/share/collectd/collectd-elasticsearch/elasticsearch_collectd.py /usr/share/collectd/python/"},
+        {"WORKDIR_POST": "/.docker/"},
+        {"CMD": "/.docker/run.sh"}
+    ],
+    "layer": false,
+    "tags": ["master"]
+}

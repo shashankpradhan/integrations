@@ -1,0 +1,19 @@
+{
+    "conf": {
+        "10-write_http-plugin.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-write_http/10-write_http-plugin.conf",
+        "10-write_http-plugin.pre-5.5.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-write_http/10-write_http-plugin.pre-5.5.conf"
+    },
+    "dependencies": [""],
+    "download_code": false,
+    "instructions": [
+        {"FROM": "quay.io/signalfuse/collectd"},
+        {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
+        {"ADD": {"managed_config/10-write_http.conf":"/etc/collectd/managed_config/10-write_http-plugin.conf"}},
+        {"UPGRADE": true},
+        {"UPDATE": true},
+        {"WORKDIR_POST": "/.docker/"},
+        {"CMD": "/.docker/run.sh"}
+    ],
+    "layer": false,
+    "tags": ["master"]
+}

@@ -1,0 +1,18 @@
+{
+    "conf": {
+        "10-statsd.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-statsd/10-statsd.conf"
+    },
+    "dependencies": [],
+    "download_code": false,
+    "instructions": [       
+        {"FROM": "quay.io/signalfuse/collectd"},
+        {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
+        {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
+        {"UPGRADE": true},
+        {"UPDATE": true},
+        {"WORKDIR_POST": "/.docker/"},
+        {"CMD": "/.docker/run.sh"}
+    ],
+    "layer": false,
+    "tags": ["master"]
+}

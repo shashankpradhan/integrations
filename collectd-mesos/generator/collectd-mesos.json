@@ -1,0 +1,20 @@
+{
+    "conf": {
+        "10-mesos-master.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-mesos/10-mesos-master.conf",
+        "10-mesos-slave.conf": "https://github.com/signalfx/integrations/blob/{tag}/collectd-mesos/10-mesos-slave.conf"
+    },
+    "dependencies": [],
+    "download_code": true,
+    "instructions": [       
+        {"FROM": "quay.io/signalfuse/collectd"},
+        {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
+        {"ADD": {"plugins/collectd-mesos": "/opt/collectd/collectd-mesos"}},
+        {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
+        {"UPGRADE": true},
+        {"UPDATE": true},
+        {"WORKDIR_POST": "/.docker/"},
+        {"CMD": "/.docker/run.sh"}
+    ],
+    "layer": false,
+    "tags": ["master"]
+}

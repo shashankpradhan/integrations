@@ -1,0 +1,19 @@
+{
+    "conf": {
+        "10-postgresql.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-postgresql/10-postgresql.conf",
+        "10-postgresql_pre92.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-postgresql/10-postgresql_pre92.conf"
+    },
+    "dependencies": [],
+    "download_code": false,
+    "instructions": [       
+        {"FROM": "quay.io/signalfuse/collectd"},
+        {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
+        {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
+        {"UPGRADE": true},
+        {"UPDATE": true},
+        {"WORKDIR_POST": "/.docker/"},
+        {"CMD": "/.docker/run.sh"}
+    ],
+    "layer": false,
+    "tags": ["master"]
+}

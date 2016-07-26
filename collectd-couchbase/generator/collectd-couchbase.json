@@ -1,0 +1,19 @@
+{
+    "conf": {
+        "10-couchbase.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-couchbase/10-couchbase.conf"
+    },
+    "dependencies": [],
+    "download_code": true,
+    "instructions": [
+        {"FROM": "quay.io/signalfuse/collectd"},
+        {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
+        {"ADD": {"plugins/collectd-couchbase": "/opt/collectd-couchbase"}},
+        {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
+        {"UPGRADE": true},
+        {"UPDATE": true},
+        {"WORKDIR_POST": "/.docker/"},
+        {"CMD": "/.docker/run.sh"}
+    ],
+    "layer": false,
+    "tags": ["master"]
+}

@@ -1,0 +1,19 @@
+{
+    "conf": {
+        "20-zookeeper.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-zookeeper/20-zookeeper.conf"
+    },
+    "dependencies": [],
+    "download_code": true,
+    "instructions": [       
+        {"FROM": "quay.io/signalfuse/collectd"},
+        {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
+        {"ADD": {"plugins/zookeeper-collectd-plugin":"/usr/share/collectd/zookeeper-collectd-plugin"}},
+        {"ADD": {"managed_config":"/etc/collectd/managed_config"}},
+        {"UPGRADE": true},
+        {"UPDATE": true},
+        {"WORKDIR_POST": "/.docker/"},
+        {"CMD": "/.docker/run.sh"}
+    ],
+    "layer": false,
+    "tags": ["master"]
+}

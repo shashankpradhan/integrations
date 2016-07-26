@@ -1,0 +1,20 @@
+{
+    "conf": {
+        "10-docker.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-docker/10-docker.conf"
+    },
+    "dependencies": [],
+    "download_code": true,
+    "instructions": [       
+        {"FROM": "quay.io/signalfuse/collectd"},
+        {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
+        {"ADD": {"plugins/docker-collectd-plugin": "/usr/share/collectd/docker-collectd-plugin"}},
+        {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
+        {"UPGRADE": true},
+        {"UPDATE": true},
+        {"RUN": "pip install -r /usr/share/collectd/docker-collectd-plugin/requirements.txt"},
+        {"WORKDIR_POST": "/.docker/"},
+        {"CMD": "/.docker/run.sh"}
+    ],
+    "layer": false,
+    "tags": ["master"]
+}
