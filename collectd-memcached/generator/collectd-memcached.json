@@ -1,6 +1,6 @@
 {
     "conf": {
-        "10-memchached.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-memcached/10-memcached.conf"
+        "10-memcached.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-memcached/10-memcached.conf"
     },
     "dependencies": [],
     "download_code": true,
