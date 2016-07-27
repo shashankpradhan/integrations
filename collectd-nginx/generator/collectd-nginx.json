@@ -1,6 +1,6 @@
 {
     "conf": {
-        "10-nginx": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-nginx/10-nginx.conf"
+        "10-nginx.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-nginx/10-nginx.conf"
     },
     "dependencies": [],
     "download_code": false,

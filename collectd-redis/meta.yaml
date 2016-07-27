@@ -1,7 +1,7 @@
 { "display_name":"Redis",
   "description": "Monitor Redis using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-redis",
-  "code": "https://github.com/signalfx/collectd/blob/master/src/redis.c",
+  "code": "https://github.com/signalfx/redis-collectd-plugin",
   "featured": false,
   "logo_large": "/images/repos/collectd-redis/img/integrations_redis.png",
   "logo_small": "/images/repos/collectd-redis/img/integrations_redis%402x.png",

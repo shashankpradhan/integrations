@@ -3,11 +3,10 @@
         "10-jmx.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-java/10-jmx.conf"
     },
     "dependencies": [],
-    "download_code": true,
+    "download_code": false,
     "instructions": [
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
-        {"ADD": {"plugins/collectd-java": "/opt/collectd/collectd-java"}},
         {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
         {"UPGRADE": true},
         {"UPDATE": true},

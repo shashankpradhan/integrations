@@ -1,7 +1,7 @@
 { "display_name":"ZooKeeper",
   "description": "Monitor ZooKeeper using the SignalFx collectd agent.",
   "project_url": "https://github.com/signalfx/integrations/tree/master/collectd-zookeeper",
-  "code": "https://github.com/signalfx/collectd/blob/master/src/zookeeper.c",
+  "code": "https://github.com/signalfx/collectd-zookeeper",
   "featured": false,
   "logo_large": "/images/repos/collectd-zookeeper/img/integrations_zookeeper.png",
   "logo_small": "/images/repos/collectd-zookeeper/img/integrations_zookeeper%402x.png",
