@@ -12,7 +12,7 @@
         {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
         {"UPGRADE": true},
         {"UPDATE": true},
-        {"RUN": "mkdir /usr/collectd/java-collectd-plugin"},
+        {"RUN": "mkdir /usr/share/collectd/java-collectd-plugin"},
         {"RUN": "cp /opt/collectd/collectd-java/signalfx_types_db /usr/share/collectd/java-collectd-plugin/"},
         {"WORKDIR_POST": "/.docker/"},
         {"CMD": "/.docker/run.sh"}
