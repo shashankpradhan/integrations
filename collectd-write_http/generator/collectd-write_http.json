@@ -3,14 +3,14 @@
         "10-write_http-plugin.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-write_http/10-write_http-plugin.conf",
         "10-write_http-plugin.pre-5.5.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-write_http/10-write_http-plugin.pre-5.5.conf"
     },
-    "default": false,
+    "default": true,
     "dependencies": [""],
     "download_code": false,
     "exclude": false,
     "instructions": [
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
-        {"ADD": {"managed_config":"/etc/collectd/managed_config"}},
+        {"ENV": {"DISABLE_WRITE_HTTP":"True"}},
         {"UPGRADE": true},
         {"UPDATE": true},
         {"WORKDIR_POST": "/.docker/"},

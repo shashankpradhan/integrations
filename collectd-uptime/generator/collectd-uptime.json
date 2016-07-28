@@ -7,7 +7,7 @@
     "instructions": [       
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
-        {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
+        {"ENV": {"DISABLE_UPTIME": "True"}},
         {"UPGRADE": true},
         {"UPDATE": true},
         {"WORKDIR_POST": "/.docker/"},
