@@ -9,7 +9,7 @@
     "instructions": [       
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
-        {"ADD": {"plugins/zookeeper-collectd-plugin":"/usr/share/collectd/zookeeper-collectd-plugin"}},
+        {"ADD": {"plugins/collectd-zookeeper":"/usr/share/collectd/zookeeper-collectd-plugin"}},
         {"ADD": {"managed_config":"/etc/collectd/managed_config"}},
         {"UPGRADE": true},
         {"UPDATE": true},
