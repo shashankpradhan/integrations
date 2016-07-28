@@ -2,8 +2,10 @@
     "conf": {
         "20-hbase.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-hbase/20-hbase.conf"
     },
+    "default": false,
     "dependencies": ["collectd-java"],
     "download_code": false,
+    "exclude": false,
     "instructions": [       
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},

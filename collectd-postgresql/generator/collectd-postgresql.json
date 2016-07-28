@@ -3,8 +3,10 @@
         "10-postgresql.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-postgresql/10-postgresql.conf",
         "10-postgresql_pre92.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-postgresql/10-postgresql_pre92.conf"
     },
+    "default": false,
     "dependencies": [],
     "download_code": false,
+    "exclude": false,
     "instructions": [       
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},

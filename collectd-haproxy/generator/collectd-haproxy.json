@@ -2,8 +2,10 @@
     "conf": {
         "10-haproxy.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-haproxy/10-haproxy.conf"
     },
+    "default": false,
     "dependencies": [],
     "download_code": false,
+    "exclude": false,
     "instructions": [       
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},

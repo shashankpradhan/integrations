@@ -2,8 +2,10 @@
     "conf": {
         "10-riak.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-riak/10-riak.conf"
     },
+    "default": false,
     "dependencies": ["collectd-curl-json"],
     "download_code": false,
+    "exclude": false,
     "instructions": [       
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},

@@ -2,8 +2,10 @@
     "conf": {
         "10-docker.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-docker/10-docker.conf"
     },
+    "default": false,
     "dependencies": [],
     "download_code": true,
+    "exclude": false,
     "instructions": [       
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},

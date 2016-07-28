@@ -2,8 +2,10 @@
     "conf": {
         "20-tail-syslog.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-tail-syslog/20-tail-syslog.conf"
     },
+    "default": false,
     "dependencies": [],
     "download_code": false,
+    "exclude": false,
     "instructions": [       
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},

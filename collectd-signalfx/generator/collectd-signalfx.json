@@ -2,8 +2,10 @@
     "conf": {
         "10-signalfx.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-signalfx/10-signalfx.conf"
     },
+    "default": false,
     "dependencies": [],
     "download_code": false,
+    "exclude": false,
     "instructions": [
                     {"FROM": "quay.io/signalfuse/collectd"},
                     {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},

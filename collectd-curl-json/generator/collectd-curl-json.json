@@ -1,7 +1,9 @@
 {
     "conf": {},
+    "default": false,
     "dependencies": [],
     "download_code": false,
+    "exclude": true,
     "instructions": [
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},

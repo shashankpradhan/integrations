@@ -3,8 +3,10 @@
         "10-mesos-master.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-mesos/10-mesos-master.conf",
         "10-mesos-slave.conf": "https://github.com/signalfx/integrations/blob/{tag}/collectd-mesos/10-mesos-slave.conf"
     },
+    "default": false,
     "dependencies": [],
     "download_code": true,
+    "exclude": false,
     "instructions": [       
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
