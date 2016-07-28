@@ -3,7 +3,7 @@
         "10-memcached.conf": "https://raw.githubusercontent.com/signalfx/integrations/{tag}/collectd-memcached/10-memcached.conf"
     },
     "dependencies": [],
-    "download_code": true,
+    "download_code": false,
     "instructions": [
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
