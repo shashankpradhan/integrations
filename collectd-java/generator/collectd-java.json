@@ -10,7 +10,7 @@
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
         {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
-        {"ADD": {"resources/signalfx_types_db":"/usr/share/collectd/java-collectd-plugin/signalfx_types_db"}},
+        {"ADD": {"resources/collectd-java/signalfx_types_db":"/usr/share/collectd/java-collectd-plugin/signalfx_types_db"}},
         {"UPGRADE": true},
         {"UPDATE": true},
         {"RUN": "mkdir /usr/share/collectd/java-collectd-plugin"},
