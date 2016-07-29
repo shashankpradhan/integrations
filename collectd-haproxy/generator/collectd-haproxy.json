@@ -4,7 +4,7 @@
     },
     "default": false,
     "dependencies": [],
-    "download_code": false,
+    "download_code": true,
     "exclude": false,
     "instructions": [       
         {"FROM": "quay.io/signalfuse/collectd"},

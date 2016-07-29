@@ -10,7 +10,7 @@
     "instructions": [       
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
-        {"ADD": {"plugins/collectd-mesos": "/opt/collectd/collectd-mesos"}},
+        {"ADD": {"plugins/collectd-mesos": "/opt/collectd-mesos"}},
         {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
         {"UPGRADE": true},
         {"UPDATE": true},
