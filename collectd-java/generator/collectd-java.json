@@ -21,7 +21,7 @@
     "layer": false,
     "resources": [
         {
-            "file": "signalfx_types_db",
+            "file": "{sep}signalfx_types_db",
             "destination": "{sep}signalfx_types_db"
         }
     ],
