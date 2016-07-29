@@ -13,7 +13,6 @@
         {"ADD": {"resources/collectd-java/signalfx_types_db":"/usr/share/collectd/java-collectd-plugin/signalfx_types_db"}},
         {"UPGRADE": true},
         {"UPDATE": true},
-        {"RUN": "cp /opt/collectd/collectd-java/signalfx_types_db /usr/share/collectd/java-collectd-plugin/"},
         {"WORKDIR_POST": "/.docker/"},
         {"CMD": "/.docker/run.sh"}
     ],
