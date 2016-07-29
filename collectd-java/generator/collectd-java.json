@@ -10,6 +10,7 @@
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
         {"ADD": {"managed_config": "/etc/collectd/managed_config"}},
+        {"ADD": {"resources/signalfx_types_db":"/usr/share/collectd/java-collectd-plugin/signalfx_types_db"}},
         {"UPGRADE": true},
         {"UPDATE": true},
         {"RUN": "mkdir /usr/share/collectd/java-collectd-plugin"},
@@ -18,5 +19,11 @@
         {"CMD": "/.docker/run.sh"}
     ],
     "layer": false,
+    "resources": [
+        {
+            "file": "signalfx_types_db",
+            "destination": "{sep}signalfx_types_db"
+        }
+    ],
     "tags": ["master"]
 }
