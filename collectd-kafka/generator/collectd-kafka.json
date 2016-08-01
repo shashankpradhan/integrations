@@ -6,7 +6,7 @@
     "default": false,
     "dependencies": ["collectd-java"],
     "download_code": false,
-    "exclude": true,
+    "exclude": false,
     "instructions": [
         {"FROM": "quay.io/signalfuse/collectd"},
         {"MAINTAINER": "SignalFx Support <support+collectd@signalfx.com>"},
