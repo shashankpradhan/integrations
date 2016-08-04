@@ -1,5 +1,3 @@
 {
-  "matchers":[
-    {"name":"nginx", "location":"collectd-nginx", "conf":"10-nginx.conf", "pattern":"^nginx: master process"}
-  ]
+  "matchers":[{"name":"nginx", "location":"collectd-nginx", "conf":"10-nginx.conf", "pattern":"^nginx: master process"}]
 }
